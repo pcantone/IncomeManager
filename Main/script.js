@@ -7,8 +7,7 @@ var optionButtonList = []
 var phase2Div = null
 
 function init(){
-
-  currentEvent = new event(tempPrompt,tempChoices,tempConsequence);
+  currentEvent = EventList[0]
   //phaseTwo = new phaseTwo();
 
   phase1Div = document.getElementById("phase1")
@@ -25,22 +24,6 @@ function event(prompt, choices, con){
   this.choices = choices;
   this.consequence = con;
 }
-
-tempPrompt = "Yard sale day is coming up, you have the opportunity to get rid of some old items:"
-
-/* List of Choices */
-tempChoices = [
-  "Spend a few hours selling old items",
-  "Hold onto your goods",
-  "Do another thing that I couldn't think of an option for",
-]
-
-/* List of Functions */
-tempConsequence = [
-  () => { phasesetHealth(-10) },
-  () => { setMoney(-50) },
-  () => {  },
-]
 
 function clickChoice( indexOfChoice ){
   currentEvent.consequence[indexOfChoice]();
