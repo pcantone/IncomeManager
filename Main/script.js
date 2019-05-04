@@ -4,18 +4,18 @@ var phaseTwo = null
 
 var phase1Div = null
 var optionButtonList = []
-
 var phase2Div = null
 
 function init(){
   currentEvent = new event(tempPrompt,tempChoices,tempConsequence);
   phaseTwo = new phaseTwo();
-
+  console.log("Hello")
   phase1Div = document.getElementById("phase1")
-  quitionPrompt = document.getElementById("question")
+  questionPrompt = document.getElementById("question")
   optionButtonList = document.getElementsByClassName("options")
 
   phase2Div = document.getElementById("phase2")
+  phaseOneSetup()
 }
 
 /* Event Class */
@@ -47,8 +47,8 @@ function clickChoice( indexOfChoice ){
 }
 
 function phaseOneSetup(){
-  phase1Div.style.display = "block"
-  quitionPrompt.value = currentEvent.prompt
+  //phase1Div.style.display = "block"
+  questionPrompt.value = currentEvent.prompt
   for( let i = 0; i < 3 ; i++)
     optionButtonList.value = currentEvent.choices[i]
 }
