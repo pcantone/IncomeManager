@@ -1,6 +1,7 @@
 
 /* Person Attribute Class */
-function phaseTwo(){
+function phaseTwo(n){
+    this.name = n;
     this.health = 100;
     this.money = 100;
     this.hunger = 100;

@@ -36,3 +36,6 @@ function phaseOneSetup(){
   for( let i = 0; i < 3 ; i++)
     optionButtonList[i].innerHTML = currentEvent.choices[i]
 }
+function beginGame(){
+  window.location.href = "index.html";
+}
