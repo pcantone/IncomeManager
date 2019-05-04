@@ -1,7 +1,7 @@
 
 
 function init(){
-  
+  personalAttr = new phaseTwo();
 }
 
 /* Event Class */
