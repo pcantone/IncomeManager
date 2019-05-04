@@ -4,30 +4,48 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
   <script src="script.js"></script>
   <script src="phase_two.js"></script>
+  <script src="http://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+
   <title>Income Manager</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body onload="init()"id="global">
+<body onload="init()">
   <!-- This is the Header -->
-    <div id="header"> <h1>Bootstrap test ya feel?</h1></div>
 
     <!-- This Could Be the Main Body -->
+    <div class="row">
+      <div id="header" class="text-center col-md-12"><h1>Bootstrap test ya feel?</h1></div>
+    </div><!--  close row  -->
 
     <div id = "phase1" class="container">
 
 
       <div class="row">
-        <div id = "question" class="col-md-12">Question</div>
+        <div id = "question" class="text-center col-md-12"><h3>Question</h3></div>
       </div><!--  close row  -->
 
       <div class="row">
-        <div class="col-md-4 options">Option 1</div>
-        <div class="col-md-4 options">Option 2</div>
-        <div class="col-md-4 options">Option 3</div>
+        <div class="text-center col-md-4 options">
+          <div class="optionsButton">
+            Option 1
+          </div>
+        </div>
+
+        <div class="text-center col-md-4 options">
+          <div class="optionsButton">
+            Option 2
+          </div>
+        </div>
+
+        <div class="text-center col-md-4 options">
+          <div class="optionsButton">
+            Option 3
+          </div>
+        </div>
       </div><!--  close row  -->
 
       <div class="row">
-        <div id="consequence" class="col-md-12">Consequence</div>
+        <div id="consequence" class="text-center col-md-12">Consequence</div>
       </div><!--  close row  -->
 
     </div><!-- close phase1 -->
@@ -35,11 +53,11 @@
 
 
 
-    <div id = "phase2" class="container">
+    <div id = "phase2" class="text-center container">
 
 
       <div class="row">
-        <div id = "decisionTree" class="col-md-12">Decision Tree</div>
+        <div id = "decisionTree" class="text-center col-md-12">Decision Tree</div>
       </div><!--  close row  -->
 
 
