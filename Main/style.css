@@ -1,0 +1,38 @@
+
+
+
+#question{
+  font-size: 30px;
+  background-color: #CCC;
+  height: 40%;
+  float: left;
+}
+
+.options{
+  background-color:#0F0;
+  height: 40%;
+  float: left;
+}
+
+.options:first-child{
+  background-color: #9F0;
+}
+.options:last-child{
+  background-color: #9F0;
+}
+
+#consequence{
+  background-color:#999;
+  height: 40%;
+float: left;
+}
+
+#decisionTree{
+  background-color: #CCC;
+  height:50%;
+  float: left;
+}
+
+#global{
+  height:1000px;
+}
