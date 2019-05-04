@@ -12,7 +12,7 @@ function init(){
   phaseTwo = new phaseTwo();
 
   phase1Div = document.getElementById("phase1")
-  quitionPrompt = document.getElementById("quition")
+  quitionPrompt = document.getElementById("question")
   optionButtonList = document.getElementsByClassName("options")
 
   phase2Div = document.getElementById("phase2")
