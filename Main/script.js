@@ -37,8 +37,8 @@ tempChoices = [
 
 /* List of Functions */
 tempConsequence = [
-  () => {phasesetHealth(-10)},
-  () => {setMoney(-50) },
+  () => { phasesetHealth(-10) },
+  () => { setMoney(-50) },
   () => {  },
 ]
 
