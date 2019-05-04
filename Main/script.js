@@ -3,6 +3,8 @@ var currentEvent = null
 var phaseTwo = null
 
 var phase1Div = null
+var optionButtonList = []
+
 var phase2Div = null
 
 function init(){
@@ -10,6 +12,9 @@ function init(){
   phaseTwo = new phaseTwo();
 
   phase1Div = document.getElementById("phase1")
+  quitionPrompt = document.getElementById("quition")
+  optionButtonList = document.getElementsByClassName("options")
+
   phase2Div = document.getElementById("phase2")
 }
 
@@ -36,7 +41,6 @@ tempConsequence = [
   () => {  },
 ]
 
-
 function clickChoice( indexOfChoice ){
   currentEvent.consequence[indexOfChoice]();
   // startPhaseTwo()
@@ -44,5 +48,7 @@ function clickChoice( indexOfChoice ){
 
 function phaseOneSetup(){
   phase1Div.style.display = "block"
-  // Array.prototype.forEach.
+  quitionPrompt.value = currentEvent.prompt
+  for( let i = 0; i < 3 ; i++)
+    optionButtonList.value = currentEvent.choices[i]
 }
