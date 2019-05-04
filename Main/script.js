@@ -7,12 +7,13 @@ var optionButtonList = []
 var phase2Div = null
 
 function init(){
+
   currentEvent = new event(tempPrompt,tempChoices,tempConsequence);
-  phaseTwo = new phaseTwo();
-  console.log("Hello")
+  //phaseTwo = new phaseTwo();
+
   phase1Div = document.getElementById("phase1")
   questionPrompt = document.getElementById("question")
-  optionButtonList = document.getElementsByClassName("options")
+  optionButtonList = document.getElementsByClassName("optionsButton")
 
   phase2Div = document.getElementById("phase2")
   phaseOneSetup()
@@ -31,7 +32,7 @@ tempPrompt = "Yard sale day is coming up, you have the opportunity to get rid of
 tempChoices = [
   "Spend a few hours selling old items",
   "Hold onto your goods",
-  "Do another thing that I couldn’t think of an option for",
+  "Do another thing that I couldn't think of an option for",
 ]
 
 /* List of Functions */
@@ -48,7 +49,7 @@ function clickChoice( indexOfChoice ){
 
 function phaseOneSetup(){
   //phase1Div.style.display = "block"
-  questionPrompt.value = currentEvent.prompt
+  questionPrompt.innerHTML = currentEvent.prompt
   for( let i = 0; i < 3 ; i++)
-    optionButtonList.value = currentEvent.choices[i]
+    optionButtonList[i].innerHTML = currentEvent.choices[i]
 }

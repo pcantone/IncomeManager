@@ -1,9 +1,5 @@
 
-
-function init(){
-
-}
-/* Person Attribute Class */ 
+/* Person Attribute Class */
 function phaseTwo(){
     this.health = 100;
     this.money = 100;
@@ -11,7 +7,7 @@ function phaseTwo(){
     this.happiness = 100;
 }
 
-/* Getter Functions*/ 
+/* Getter Functions*/
 function getHealth(){
     return phaseTwo.health();
 }
