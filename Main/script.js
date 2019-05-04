@@ -1,11 +1,16 @@
-
-
 var eventList = []
 var currentEvent = null
+var phaseTwo = null
+
+var phase1Div = null
+var phase2Div = null
 
 function init(){
   currentEvent = new event(tempPrompt,tempChoices,tempConsequence);
-  personalAttr = new phaseTwo();
+  phaseTwo = new phaseTwo();
+
+  phase1Div = document.getElementById("phase1")
+  phase2Div = document.getElementById("phase2")
 }
 
 /* Event Class */
@@ -26,15 +31,18 @@ tempChoices = [
 
 /* List of Functions */
 tempConsequence = [
-  () => {setHealth(-10)},
+  () => {phasesetHealth(-10)},
   () => {setMoney(-50) },
   () => {  },
 ]
 
-currentEvent = new event(tempPrompt,tempChoices,tempConsequence);
 
-var eventList = []
-
-function clickeChoice( indexOfChoice ){
+function clickChoice( indexOfChoice ){
   currentEvent.consequence[indexOfChoice]();
+  // startPhaseTwo()
+}
+
+function phaseOneSetup(){
+  phase1Div.style.display = "block"
+  // Array.prototype.forEach.
 }
