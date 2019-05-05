@@ -4,7 +4,8 @@ function job(n,p,t){
     this.pay = p;
     this.hours = t;
     this.toll = ["Blue Collar","White Collar"];
-    this.educationNeeded = ["None", "High School Diploma", "College Degree"];
+    this.jobLevel = ['1','2','3'];
+    this.jobstrikes = 3;
 }
 
 function getPay(){
@@ -21,4 +22,13 @@ function getToll(i){
 }
 function getEducationNeeded(i){
     return job.educationNeeded[i];
+}
+function getJobLevel(i){
+    return job.jobLevel[i];
+}
+function getJobStrikes(){
+    return job.jobstrikes();
+}
+function getStrike(){
+    job.jobstrikes() = job.jobstrikes() - 1;
 }

@@ -1,7 +1,8 @@
 
 /* Person Attribute Class */
-function phaseTwo(n){
-    this.name = n;
+function phaseTwo(p,j){
+    this.person = p;
+    this.job = j;
     this.health = 100;
     this.money = 100;
     this.hunger = 100;
@@ -20,6 +21,9 @@ function getHunger(){
 }
 function getHappyness(){
     return phaseTwo.happiness();
+}
+function getName(){
+    return phaseTwo.name();
 }
 
 /* Setter Functions */
