@@ -9,6 +9,7 @@ var phase2Div = null
 
 function init(){
   pushEvent();
+  person = people["Johnny"];
   // currentEvent = EventList[0]
   //phaseTwo = new phaseTwo();
 
@@ -28,6 +29,10 @@ function event(prompt, choices, con){
 }
 
 function clickChoice( indexOfChoice ){
+  if(job == null){
+    tempJob = potentialJobs[person.potentialJob[indexOfChoice]];
+    phaseTwo(tempJob);
+  }
   currentEvent.consequence[indexOfChoice]()
 
   // startPhaseTwo()

@@ -8,8 +8,7 @@ chanceOfMentalIll = null
 timeTillNextHeater = 15
 
 /* Person Attribute Class */
-function phaseTwo(p,j){
-    person = p; //person object
+function phaseTwo(j){
     job = j; //job object
 
     chanceOfPhysicalIll = job.getPDemand() - person.getPTolerance()

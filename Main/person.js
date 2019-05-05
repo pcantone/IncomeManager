@@ -1,13 +1,21 @@
+var people = {"Johnny":new person("Johnny",'Amelia', 'Bella',['Carlift','Server','Warehouse Worker'], 60,80),
+            "Victoria":new person("Victoria",'','',['Janitor','Busperson','Cook'],50,70),
+            "Steven":new person("Steven",'Lucas','Sierra',['Internship','Cashier','Security'], 100,100),
+            "Rachel":new person("Rachel",'','Lula',['Retail','Delivery','Barista'],60,90),
+            "David":new person("David",'Emma','',['Cook','Cashier','Retail'] ,30,50),
+            "Donald":new person("Donald",'Ivanka','Betty', ['Internship','Security','Warehouse Worker'], 60,60),
+            "Andrew":new person("Andrew",'','Molly', ['Janitor','Retail','Carlift'],90,80),
+            "Nathan":new person("Nathan",'Parker','Mike', ['Barista','Retail','Internship'], 90,90)};
 
-
-function person(n,f,p,m){
-    this.name = n;
-    this.potentialJobs = ['carlift', 'Server', 'Warehouse Worker'
-    , 'Janitor', 'Busperson', 'Cook', 'Internship', 'Cashier'
-    , 'Security', 'Retail', 'Delivery', 'Barista'];
+function person(name,family,pet,potjb,pt,mt){
+    this.name = name;
     this.family = [];
-    this.physicalTolerance = p;
-    this.mentalTolerance = m; 
+    this.family.append(family);
+    this.pet = [];
+    this.pet.append(pet);
+    this.potentialJob = potjb;
+    this.physicalTolerance = pt;
+    this.mentalTolerance = mt;
 }
 
 function getName(){
@@ -25,3 +33,6 @@ function getPhysicalTolerance(){
 function getMentalTolerance(){
     return person.mentalTolerance();
 }
+
+
+
