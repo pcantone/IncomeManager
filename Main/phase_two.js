@@ -36,8 +36,7 @@ function nextEvent(){
   // timeTillNextHeater--
   // if( timeTillNextHeater < 1)
   //   pushEvent()
-  pushEvent()
-  phaseOneSetup()
+  updateCurrentEvent()
 }
 var moneyCheck  = null;
 function phaseTwoManager(){
