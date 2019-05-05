@@ -1,10 +1,8 @@
 
+var persons = {"Johnny":new person("Johnny",6,8)}
 
-function person(n,f,p,m){
+function person(n,p,m){
     this.name = n;
-    this.potentialJobs = ['carlift', 'Server', 'Warehouse Worker'
-    , 'Janitor', 'Busperson', 'Cook', 'Internship', 'Cashier'
-    , 'Security', 'Retail', 'Delivery', 'Barista'];
     this.family = [];
     this.physicalTolerance = p;
     this.mentalTolerance = m; 
