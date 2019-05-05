@@ -22,7 +22,8 @@ function init(){
 }
 
 /* Event Class */
-function event(prompt, choices, con){
+function event(id, prompt, choices, con){
+  this.id = id;
   this.prompt = prompt;
   this.choices = choices;
   this.consequence = con;
