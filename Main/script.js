@@ -1,5 +1,6 @@
 var currentEvent = null
 var phaseTwo = null
+var bufferEvent = []
 
 /* Soon to be reference to the buttons */
 var phase1Div = null
@@ -27,11 +28,16 @@ function event(prompt, choices, con){
 }
 
 function clickChoice( indexOfChoice ){
-  currentEvent.consequence[indexOfChoice]();
+  currentEvent.consequence[indexOfChoice]()
+
   // startPhaseTwo()
 }
+// Follows a simplpe Stack procedure
 function pushEvent(){
-  currentEvent = EventList[ parseInt(Math.random()*EventList.length,10) ]
+  bufferEvent.append(EventList[ parseInt(Math.random()*EventList.length,10) ])
+}
+function popEvent(){
+
 }
 function phaseOneSetup(){
   //phase1Div.style.display = "block"
