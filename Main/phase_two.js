@@ -41,10 +41,10 @@ function nextEvent(){
 }
 var moneyCheck  = null;
 function phaseTwoManager(){
-    if (document.getElementById("box1").ischecked){
+    if (document.getElementById("box1").checked){
       //family time: add happiness (check for family)
     }
-    else if(document.getElementById("box2")){
+    if(document.getElementById("box2").checked){
       //pay insurance
       moneycheck = person.getMoney() - 120;
       if (moneyCheck <= 0){
@@ -54,7 +54,7 @@ function phaseTwoManager(){
         nextEvent();
       }
     }
-    else if(document.getElementById("box3")){
+    if(document.getElementById("box3").checked){
       //Pay taxes
       moneycheck = person.getMoney() - 120;
       if (moneyCheck <= 0){
@@ -64,24 +64,25 @@ function phaseTwoManager(){
         nextEvent();
       }
     }
-    else if(document.getElementById("box4")){
+    if(document.getElementById("box4").checked){
       //Buy cheap food
       moneycheck = person.getMoney() - 5;
       if (moneyCheck <= 0){
         //game over
       }
       else{
-        //minus health
+        person.setHealth(-5);
         nextEvent();
       }
     }
-    else if(document.getElementById("box5")){
+    if(document.getElementById("box5").checked){
       //buy healthy food
       moneycheck = person.getMoney() - 10;
       if (moneyCheck <= 0){
         //game over
       }
       else{
+        person.setHealth(5);
         nextEvent();
       }
     }

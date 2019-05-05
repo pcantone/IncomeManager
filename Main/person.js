@@ -18,6 +18,7 @@ function Person(name,family,pet,potjb,pt,mt,mon){
     this.mentalTolerance = mt;
     this.money = 1000;
     this.food = 6;
+    this.health = 100;
 }
 
 function getName(){
@@ -40,5 +41,12 @@ function getMoney(){
 }
 function getFood(){
     return person.food;
+}
+function getHealth(){
+    return person.health;
+}
+
+function setHealth(num){
+    person.health = person.health + num;
 }
 
