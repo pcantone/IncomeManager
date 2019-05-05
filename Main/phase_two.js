@@ -13,11 +13,11 @@ timeTillNextHeater = 15
 function phaseTwo(j){
     job = j; //job object
 
-    chanceOfPhysicalIll = job.getPDemand() - person.getPTolerance()
+    chanceOfPhysicalIll = getPDemand() - getPTolerance()
     chanceOfPhysicalIll = chanceOfPhysicalIll > 10 ? chanceOfPhysicalIll : 10
 
-    chanceOfMentalIll = job.getMDemand() - person.getMTolerance()
-    chanceOfMentalIll = chanceOfMentalIll > 10 ? chanceOfMentalIll : 10
+    // chanceOfMentalIll = getMDemand() - getMTolerance()
+    // chanceOfMentalIll = chanceOfMentalIll > 10 ? chanceOfMentalIll : 10
 
     // this.health = 100;
     // this.money = 100;
