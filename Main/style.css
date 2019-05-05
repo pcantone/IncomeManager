@@ -153,6 +153,7 @@ body {
 
 #characterSelect{
   width: 100%;
+  font-size: 30px;
   float: left;
 
 }
@@ -161,4 +162,6 @@ body {
   background-color: #205493;
   border: 1px solid #000;
   text-align: center;
+  line-height: 45px;
+  height: 50px;
 }
