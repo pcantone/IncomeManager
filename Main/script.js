@@ -6,7 +6,10 @@ var bufferEvent = []
 var phase1Div = null
 var optionButtonList = []
 var phase2Div = null
-
+var moneyReference = null
+var dayReference = null
+var payDayReference = null
+var foodReference = null
 function init(){
   pushEvent();
   popEvent();
@@ -17,6 +20,10 @@ function init(){
   phase1Div = document.getElementById("phase1")
   questionPrompt = document.getElementById("question")
   optionButtonList = document.getElementsByClassName("optionsButton")
+  moneyReference = document.getElementById("displayMoney")
+  dayReference = document.getElementById("displayDay")
+  payDayReference = document.getElementById("displayNextPayDay")
+  foodReference = document.getElementById("displayFood")
 
   phase2Div = document.getElementById("phase2")
   phaseOneSetup()
@@ -40,9 +47,16 @@ function clickChoice( indexOfChoice ){
   // startPhaseTwo()
 }
 
+function updateCurrentEvent(){
+  if(EventList.length < 2)
+    pushEvent()
+  popEvent()
+}
+
 // Follows a simplpe Stack procedure
 function pushEvent(){
   bufferEvent.push(EventList[ parseInt(Math.random()*EventList.length,10) ])
+
 }
 function popEvent(){
   currentEvent = bufferEvent.pop()
@@ -50,6 +64,11 @@ function popEvent(){
 
 function phaseOneSetup(){
   //phase1Div.style.display = "block"
+  moneyReference.innerHTML = "Money: "+getMoney()
+  dayReference.innerHTML = "Day: " + dayCounter;
+  payDayReference.innerHTML = "Next Pay Day: " + payDay;
+  foodReference.innerHTML = "Fod: " + getFood()
+
   questionPrompt.innerHTML = currentEvent.prompt
   for( let i = 0; i < 3 ; i++)
     optionButtonList[i].innerHTML = currentEvent.choices[i]
