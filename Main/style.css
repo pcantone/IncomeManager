@@ -1,9 +1,14 @@
-html, body { height: 100%; width: 100%; margin: 0; }
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
 
 
 body {
   display: flex;
   flex-direction: column;
+  background-color: #212121
 }
 #header{
   font-size: 30px;
@@ -47,10 +52,12 @@ body {
 
 #outerQuestion{
   background-color:#bec0c5;
-  height: 40%;
+  height: 120px;
   float: left;
   width: 100%;
+  margin-bottom: 5%;
   font-size: 22px;
+  border-radius: 0 0 10px 10px;
 }
 #question{
   width: 100%;
@@ -64,9 +71,9 @@ body {
 
 .optionsButton{
   background-color:#205493;
-  height: 60px;
+  height: 100px;
   width: 90%;
-  margin:0 5% 0 5%;
+  margin:0 5% 15% 5%;
   text-align: center;
   line-height: 22px;
   overflow: hidden;
@@ -76,6 +83,7 @@ body {
   padding: 2% 5% 2% 5%;
   text-decoration: none;
   border-radius: 10px;
+
 }
 .optionsButton:first-child{
 }
@@ -86,7 +94,10 @@ body {
   background-color:#bec0c5;
   height: 40%;
   float: left;
-  width: 100%
+  width: 100%;
+  margin-bottom: 5%;
+  border-radius: 10px;
+
 }
 
 #outerDecisionTree{
@@ -95,6 +106,9 @@ body {
   float: left;
   width: 100%;
   margin:auto;
+  border-radius: 10px;
+  margin-bottom: 5%;
+
 }
 #innerDecisionTree{
   width: 40%;
@@ -121,7 +135,6 @@ body {
 
 .row{
   margin: 1%;
-  width: 100%;
 }
 
 
