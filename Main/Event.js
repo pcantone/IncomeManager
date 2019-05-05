@@ -13,12 +13,13 @@ EventList = [
     ],
     //Actions
      [
-      () => { setMoney(+150); setHappyness(-20) },
-      () => { setHappyness(+10) },
-      () => { setMoney(-20); setHappyness(+20) },
+      () => { setMoney(+150); setHappiness(-20) },
+      () => { setHappiness(+10) },
+      () => { setMoney(-20); setHappiness(+20) },
     ],
   ),
     new event( /*Event 2*/
+      "carInsurance",
         //Promp
         "Your car insurance is due soon, fail to pay insurance means you cant legally drive your car",
         //Choices
@@ -35,6 +36,7 @@ EventList = [
         ],
     ),
     new event( /*Event 3*/
+      "friendBorrow",
         //Promp
         "You best friend ask to borrow $50 from you",
         //Choices
@@ -45,12 +47,13 @@ EventList = [
         ],
         //Actions
         [
-            () => { setMoney(-50) , setHappyness(+15)},
-            () => { setHappyness(-10) },
-            () => { setHappyness(-10) },
+            () => { setMoney(-50) , setHappiness(+15)},
+            () => { setHappiness(-10) },
+            () => { setHappiness(-10) },
         ],
     ),
     new event( /*Event 4*/
+      "carInsurance",
         //Promp
         "Your landowner demand the rent of $???(depended on the apartment you choice previously)",
         //Choices
@@ -63,10 +66,11 @@ EventList = [
         [
             () => { setMoney()  },
             () => { /*NEED_IMPLEMENT: You still live there for 10 days until Eviction, you are forced out*/},
-            () => { setHappyness(-50) },
+            () => { setHappiness(-50) },
         ],
     ),
     new event( /*Event 5*/
+      "findApartment",
         //Promp
         "You just come to this new city, you need to find an apartment", // This event must run first before any housing issue happen
         //Choices
@@ -77,12 +81,13 @@ EventList = [
         ],
         //Actions
         [
-            () => { setMoney(-400) , setHappyness(-10) /*NEED_IMPLEMENT: Transportation cost everyweek: $30*/},
+            () => { setMoney(-400) , setHappiness(-10) /*NEED_IMPLEMENT: Transportation cost everyweek: $30*/},
             () => { setMoney(-500) /*NEED_IMPLEMENT: Transportation cost everyweek: $15*/},
-            () => { setMoney(-600), setHappyness(+20) /*NEED_IMPLEMENT: Transportation cost everyweek: $5*/},
+            () => { setMoney(-600), setHappiness(+20) /*NEED_IMPLEMENT: Transportation cost everyweek: $5*/},
         ],
     ),
     new event( /*Event 6*/
+      "carBreakdown",
         //Promp
         "Your car's turning light breaks down, you take it to the mechanic and it costs $210",
         //Choices
@@ -99,6 +104,7 @@ EventList = [
         ],
     ),
     new event( /*Event 7*/
+      "payUtility",
         //Promp
         "Your Utility bill is due, what do you want to do?",
         //Choices
@@ -110,11 +116,12 @@ EventList = [
         //Actions
         [
             () => { setMoney(-150)},
-            () => { setMoney(-70), setHappyness(-20) },
-            () => { setMoney(-30), setHappyness(-40), setHealth(-20) },
+            () => { setMoney(-70), setHappiness(-20) },
+            () => { setMoney(-30), setHappiness(-40), setHealth(-20) },
         ],
     ),
     new event( /*Event 8*/
+      "studentLoan",
         //Promp
         "Your $220 student loan is overdue, what should you do",
         //Choices
@@ -125,12 +132,13 @@ EventList = [
         ],
         //Actions
         [
-            () => { setMoney(-220) , setHappyness(-10)},
+            () => { setMoney(-220) , setHappiness(-10)},
             () => { /*THIS WILL AFFECT THE LIFE AFTER GAME ENDED*/ },
             () => { setMoney(-120) /*Your parent will help to pay $100*/ },
         ],
     ),
     new event( /*Event 9*/
+      "friendConcert",
         //Promp
         "Your friend ask you to go to a concert together:",
         //Choices
@@ -141,12 +149,13 @@ EventList = [
         ],
         //Actions
         [
-            () => { setMoney(-30) , setHappyness(+35)},
-            () => { setHappyness(-30) },
-            () => { setMoney(-15), setHappyness(+20) },
+            () => { setMoney(-30) , setHappiness(+35)},
+            () => { setHappiness(-30) },
+            () => { setMoney(-15), setHappiness(+20) },
         ],
     ),
     new event( /*Event 10*/
+      "friendBirthday",
         //Promp
         "Your best friend's birthday party is coming up, if you go you have to get some gift to your friend",
         //Choices
@@ -157,12 +166,13 @@ EventList = [
         ],
         //Actions
         [
-            () => { setMoney(-20) , setHappyness(+30)},
-            () => { setHappyness(-20) },
-            () => { setHappyness(+10) },
+            () => { setMoney(-20) , setHappiness(+30)},
+            () => { setHappiness(-20) },
+            () => { setHappiness(+10) },
         ],
     ),
     new event( /*Event 11*/
+      "exCall",
         //Promp
         "Your ex call you",
         //Choices
@@ -173,12 +183,13 @@ EventList = [
         ],
         //Actions
         [
-            () => { setHappyness(+10) },
-            () => { setHappyness(+20) },
+            () => { setHappiness(+10) },
+            () => { setHappiness(+20) },
             () => {  },
         ],
     ),
     new event( /*Event 12*/
+      "rentIncrease",
         //Promp
         "Your landlord raise the rent by $150 without warning",
         //Choices
@@ -195,6 +206,7 @@ EventList = [
         ],
     ),
     new event( /*Event 13*/
+      "motherMeds",
         //Prompt
         "Your mother is ill, she need $150 to buy the medication needed, but she don't have that money",
         //Choices
@@ -205,12 +217,13 @@ EventList = [
         ],
         //Actions
         [
-            () => { setMoney(-100) , setHappyness(+40)},
-            () => { setMoney(-50), setHappyness(+20) },
-            () => { setHappyness(-20) },
+            () => { setMoney(-100) , setHappiness(+40)},
+            () => { setMoney(-50), setHappiness(+20) },
+            () => { setHappiness(-20) },
         ],
     ),
     new event( /*Event 14*/
+      "healthInsurance",
         //Promp
         "You need to select a health plan for you",
         //Choices
@@ -222,9 +235,25 @@ EventList = [
         //Actions
         [
             () => { setMoney(-290) /*You need to pay 20% for every medical expense*/},
-            () => { setHappyness(-240) /*You need to pay 30% for every medical expense*/},
+            () => { setHappiness(-240) /*You need to pay 30% for every medical expense*/},
             () => { setMoney(-200) /*You need to pay 40% for every medical expense*/},
         ],
     ),
-
+    new event( /*Event 15*/
+      "motherDoctor",
+        //Promp
+        "Your mother is sick and you consider taking a day off to go to the doctor with her",
+        //Choices
+        [
+            "Go to work",
+            "Call out and go with her",
+            "Pay for her doctor's visit"
+        ],
+        //Actions
+        [
+            () => { setHappiness(-25); /**/},
+            () => { setWorkstrike(+1); setHappiness(+25) /**/},
+            () => { setMoney(-300) /**/},
+        ],
+    ),
 ]
