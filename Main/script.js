@@ -74,7 +74,7 @@ function phaseOneSetup(){
   moneyReference.innerHTML = "Money: "+getMoney()
   dayReference.innerHTML = "Day: " + dayCounter;
   payDayReference.innerHTML = "Next Pay Day: " + payDay;
-  foodReference.innerHTML = "Fod: " + getFood()
+  foodReference.innerHTML = "Food: " + getFood()
 
   questionPrompt.innerHTML = currentEvent.prompt
   for( let i = 0; i < 3 ; i++)
