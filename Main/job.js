@@ -21,13 +21,13 @@ var potentialJobs = {'Carlift': new job("Carlift",10,8,2),
 }
 
 function getPay(){
-    return job.pay();
+    return job.pay;
 }
 function getJob(){
-    return job.name();
+    return job.name;
 }
 function getHours(){
-    return job.hours();
+    return job.hours;
 }
 function getToll(i){
     return job.toll[i];
@@ -36,11 +36,11 @@ function getEducationNeeded(i){
     return job.educationNeeded[i];
 }
 function getJobLevel(i){
-    return job.jobLevel();
+    return job.jobLevel;
 }
 function getJobStrikes(){
-    return job.jobstrikes();
+    return job.jobstrikes;
 }
 function getStrike(){
-    job.jobstrikes() = job.jobstrikes() - 1;
+    job.jobstrikes = job.jobstrikes - 1;
 }
