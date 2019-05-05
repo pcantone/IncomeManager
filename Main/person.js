@@ -10,9 +10,9 @@ var people = {"Johnny":new person("Johnny",'Amelia', 'Bella',['Carlift','Server'
 function person(name,family,pet,potjb,pt,mt){
     this.name = name;
     this.family = [];
-    this.family.append(family);
+    this.family.push(family);
     this.pet = [];
-    this.pet.append(pet);
+    this.pet.push(pet);
     this.potentialJob = potjb;
     this.physicalTolerance = pt;
     this.mentalTolerance = mt;
@@ -33,6 +33,3 @@ function getPhysicalTolerance(){
 function getMentalTolerance(){
     return person.mentalTolerance();
 }
-
-
-

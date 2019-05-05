@@ -2,6 +2,7 @@
 
 EventList = [
   new event( /*Event 1*/
+    "yardSale",
     //Promp
     "Yard sale day is coming up, you have the opportunity to get rid of some old items:",
     //Choices
@@ -12,9 +13,9 @@ EventList = [
     ],
     //Actions
      [
-      () => { setMoney(+150) , setHappyness(-20) },
+      () => { setMoney(+150); setHappyness(-20) },
       () => { setHappyness(+10) },
-      () => { setMoney(-20), setHappyness(+20) },
+      () => { setMoney(-20); setHappyness(+20) },
     ],
   ),
     new event( /*Event 2*/
@@ -83,7 +84,7 @@ EventList = [
     ),
     new event( /*Event 6*/
         //Promp
-        "Your car's turning light break down, you take it to the mechanic and it cost $210",
+        "Your car's turning light breaks down, you take it to the mechanic and it costs $210",
         //Choices
         [
             "Pay for the repair $210",
