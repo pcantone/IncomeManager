@@ -1,6 +1,8 @@
 
 var person = null
 var job = null
+var dayCounter = null;
+var payDay = null;
 
 chanceOfPhysicalIll = null
 chanceOfMentalIll = null

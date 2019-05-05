@@ -17,6 +17,7 @@ function person(name,family,pet,potjb,pt,mt,mon){
     this.physicalTolerance = pt;
     this.mentalTolerance = mt;
     this.money = 1000;
+    this.food = 6;
 }
 
 function getName(){
@@ -36,4 +37,7 @@ function getMentalTolerance(){
 }
 function getMoney(){
     return person.money;
+}
+function getFood(){
+    return person.food;
 }
