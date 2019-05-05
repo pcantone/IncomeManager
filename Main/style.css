@@ -46,10 +46,11 @@ body {
 
 
 #outerQuestion{
-  font-size: 30px;
-  background-color: #CCC;
+  background-color:#bec0c5;
+  height: 40%;
   float: left;
-  height: 50%;
+  width: 100%;
+  font-size: 22px;
 }
 #question{
   width: 100%;
