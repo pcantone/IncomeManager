@@ -45,8 +45,10 @@ function getFood(){
 function getHealth(){
     return person.health;
 }
-
 function setHealth(num){
     person.health = person.health + num;
+}
+function getPTolerance(){
+    return person.physicalTolerance;
 }
 
