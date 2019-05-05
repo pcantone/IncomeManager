@@ -7,7 +7,7 @@ var people = {"Johnny":new person("Johnny",'Amelia', 'Bella',['Carlift','Server'
             "Andrew":new person("Andrew",'','Molly', ['Janitor','Retail','Carlift'],90,80),
             "Nathan":new person("Nathan",'Parker','Mike', ['Barista','Retail','Internship'], 90,90)};
 
-function person(name,family,pet,potjb,pt,mt){
+function person(name,family,pet,potjb,pt,mt,mon){
     this.name = name;
     this.family = [];
     this.family.push(family);
@@ -16,6 +16,7 @@ function person(name,family,pet,potjb,pt,mt){
     this.potentialJob = potjb;
     this.physicalTolerance = pt;
     this.mentalTolerance = mt;
+    this.money = 1000;
 }
 
 function getName(){
@@ -32,4 +33,7 @@ function getPhysicalTolerance(){
 }
 function getMentalTolerance(){
     return person.mentalTolerance();
+}
+function getMoney(){
+    return person.getMoney();
 }

@@ -37,16 +37,24 @@ function nextEvent(){
   pushEvent()
   phaseOneSetup()
 }
-var decision = null;
-function decisionEvent(){
+var moneyCheck  = null;
+function phaseTwoManager(){
     if (document.getElementById("box1").ischecked){
-      //family time: add happiness
+      //family time: add happiness (check for family)
     }
     else if(document.getElementById("box2")){
       //pay insurance
+      moneycheck = person.getMoney() - 120;
+      if (moneyCheck <= 0){
+        //game over
+      }
+      else{
+        //move on
+      }
     }
     else if(document.getElementById("box3")){
       //Pay taxes
+      
     }
     else if(document.getElementById("box4")){
       //Buy cheap food
