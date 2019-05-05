@@ -1,13 +1,14 @@
-var eventList = []
 var currentEvent = null
 var phaseTwo = null
 
+/* Soon to be reference to the buttons */
 var phase1Div = null
 var optionButtonList = []
 var phase2Div = null
 
 function init(){
-  currentEvent = EventList[0]
+  pushEvent();
+  // currentEvent = EventList[0]
   //phaseTwo = new phaseTwo();
 
   phase1Div = document.getElementById("phase1")
@@ -29,7 +30,9 @@ function clickChoice( indexOfChoice ){
   currentEvent.consequence[indexOfChoice]();
   // startPhaseTwo()
 }
-
+function pushEvent(){
+  currentEvent = EventList[ parseInt(Math.random()*EventList.length,10) ]
+}
 function phaseOneSetup(){
   //phase1Div.style.display = "block"
   questionPrompt.innerHTML = currentEvent.prompt

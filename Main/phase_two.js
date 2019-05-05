@@ -1,41 +1,40 @@
 
+var person = null
+var job = null
+
+chanceOfPhysicalIll = null
+chanceOfMentalIll = null
+
+timeTillNextHeater = 15
+
 /* Person Attribute Class */
 function phaseTwo(p,j){
-    this.person = p;
-    this.job = j;
-    this.health = 100;
-    this.money = 100;
-    this.hunger = 100;
-    this.happiness = 100;
+    person = p; //person object
+    job = j; //job object
+
+    chanceOfPhysicalIll = job.getPDemand() - person.getPTolerance()
+    chanceOfPhysicalIll = chanceOfPhysicalIll > 10 ? chanceOfPhysicalIll : 10
+
+    chanceOfMentalIll = job.getMDemand() - person.getMTolerance()
+    chanceOfMentalIll = chanceOfMentalIll > 10 ? chanceOfMentalIll : 10
+
+    // this.health = 100;
+    // this.money = 100;
+    // this.hunger = 100;
+    // this.happiness = 100;
 }
 
-/* Getter Functions*/
-function getHealth(){
-    return phaseTwo.health();
-}
-function getMoney(){
-    return phaseTwo.money();
-}
-function getHunger(){
-    return phaseTwo.hunger();
-}
-function getHappyness(){
-    return phaseTwo.happiness();
-}
-function getName(){
-    return phaseTwo.name();
+function checkIfIll(){
+  if( Math.random() < .5)
+    person.setPIll( Math.random()*100 < chanceOfPhysicalIll ? true : false )
+  else
+    person.setMIll( Math.random()*100 < chanceOfMentalIll ? true : false )
 }
 
-/* Setter Functions */
-function setHealth(num){
-    return phaseTwo.health() + num;
-}
-function setMoney(num){
-    return phaseTwo.money() + num;
-}
-function setHunger(num){
-    return phaseTwo.hunger + num;
-}
-function setHappyness(num){
-    return phaseTwo.happiness() + num;
+function nextEvent(){
+  // timeTillNextHeater--
+  // if( timeTillNextHeater < 1)
+  //   pushEvent()
+  pushEvent()
+  phaseOneSetup()
 }
