@@ -1,13 +1,13 @@
-var people = {"Johnny":new person("Johnny",'Amelia', 'Bella',['Carlift','Server','Warehouse Worker'], 60,80),
-            "Victoria":new person("Victoria",'','',['Janitor','Busperson','Cook'],50,70),
-            "Steven":new person("Steven",'Lucas','Sierra',['Internship','Cashier','Security'], 100,100),
-            "Rachel":new person("Rachel",'','Lula',['Retail','Delivery','Barista'],60,90),
-            "David":new person("David",'Emma','',['Cook','Cashier','Retail'] ,30,50),
-            "Donald":new person("Donald",'Ivanka','Betty', ['Internship','Security','Warehouse Worker'], 60,60),
-            "Andrew":new person("Andrew",'','Molly', ['Janitor','Retail','Carlift'],90,80),
-            "Nathan":new person("Nathan",'Parker','Mike', ['Barista','Retail','Internship'], 90,90)};
+var people = {"Johnny":new Person("Johnny",'Amelia', 'Bella',['Carlift','Server','Warehouse Worker'], 60,80),
+            "Victoria":new Person("Victoria",'','',['Janitor','Busperson','Cook'],50,70),
+            "Steven":new Person("Steven",'Lucas','Sierra',['Internship','Cashier','Security'], 100,100),
+            "Rachel":new Person("Rachel",'','Lula',['Retail','Delivery','Barista'],60,90),
+            "David":new Person("David",'Emma','',['Cook','Cashier','Retail'] ,30,50),
+            "Donald":new Person("Donald",'Ivanka','Betty', ['Internship','Security','Warehouse Worker'], 60,60),
+            "Andrew":new Person("Andrew",'','Molly', ['Janitor','Retail','Carlift'],90,80),
+            "Nathan":new Person("Nathan",'Parker','Mike', ['Barista','Retail','Internship'], 90,90)};
 
-function person(name,family,pet,potjb,pt,mt,mon){
+function Person(name,family,pet,potjb,pt,mt,mon){
     this.name = name;
     this.family = [];
     this.family.push(family);
@@ -41,3 +41,4 @@ function getMoney(){
 function getFood(){
     return person.food;
 }
+

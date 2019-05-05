@@ -51,7 +51,7 @@ function phaseTwoManager(){
         //game over
       }
       else{
-        //move on
+        nextEvent();
       }
     }
     else if(document.getElementById("box3")){
@@ -61,7 +61,7 @@ function phaseTwoManager(){
         //game over
       }
       else{
-        //move on
+        nextEvent();
       }
     }
     else if(document.getElementById("box4")){
@@ -71,7 +71,8 @@ function phaseTwoManager(){
         //game over
       }
       else{
-        //move on: minus health
+        //minus health
+        nextEvent();
       }
     }
     else if(document.getElementById("box5")){
@@ -81,7 +82,7 @@ function phaseTwoManager(){
         //game over
       }
       else{
-        //move on
+        nextEvent();
       }
     }
 }
