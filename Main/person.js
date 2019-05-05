@@ -35,5 +35,5 @@ function getMentalTolerance(){
     return person.mentalTolerance();
 }
 function getMoney(){
-    return person.getMoney();
+    return person.money();
 }

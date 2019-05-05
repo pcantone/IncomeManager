@@ -54,12 +54,32 @@ function phaseTwoManager(){
     }
     else if(document.getElementById("box3")){
       //Pay taxes
-      
+      moneycheck = person.getMoney() - 120;
+      if (moneyCheck <= 0){
+        //game over
+      }
+      else{
+        //move on
+      }
     }
     else if(document.getElementById("box4")){
       //Buy cheap food
+      moneycheck = person.getMoney() - 120;
+      if (moneyCheck <= 0){
+        //game over
+      }
+      else{
+        //move on: minus health
+      }
     }
     else if(document.getElementById("box5")){
       //buy healthy food
+      moneycheck = person.getMoney() - 120;
+      if (moneyCheck <= 0){
+        //game over
+      }
+      else{
+        //move on
+      }
     }
 }
