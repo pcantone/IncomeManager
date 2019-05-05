@@ -29,6 +29,7 @@ var victoria = {"Victoria":new person("Victoria",'','', 5,7)};
 var steven = {"Steven":new person("Steven",'Lucas','Sierra', 10,10)};
 var rachel = {"Rachel":new person("Rachel",'','Lula', 6,9)};
 var david = {"David":new person("David",'Emma','', 3,5)};
-var katia = {"Katia":new person("Katia",'Ruxi','Siqi', 5,6)};
+var donald = {"Donald":new person("Donald",'Ivanka','Betty', 6,6)};
 var andrew = {"Andrew":new person("Andrew",'','Molly', 9,8)};
+var nathan = {"Nathan":new person("Nathan",'Parker','Mike', 9,9)};
 
