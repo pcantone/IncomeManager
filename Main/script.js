@@ -9,6 +9,7 @@ var phase2Div = null
 
 function init(){
   pushEvent();
+  popEvent();
   person = people["Johnny"];
   // currentEvent = EventList[0]
   //phaseTwo = new phaseTwo();
@@ -38,19 +39,23 @@ function clickChoice( indexOfChoice ){
 
   // startPhaseTwo()
 }
+
 // Follows a simplpe Stack procedure
 function pushEvent(){
-  bufferEvent.append(EventList[ parseInt(Math.random()*EventList.length,10) ])
+  bufferEvent.push(EventList[ parseInt(Math.random()*EventList.length,10) ])
 }
 function popEvent(){
-
+  currentEvent = bufferEvent.pop()
 }
+
 function phaseOneSetup(){
   //phase1Div.style.display = "block"
   questionPrompt.innerHTML = currentEvent.prompt
   for( let i = 0; i < 3 ; i++)
     optionButtonList[i].innerHTML = currentEvent.choices[i]
 }
+
+
 function beginGame(){
   window.location.href = "index.html";
 }
