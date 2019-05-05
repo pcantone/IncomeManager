@@ -24,7 +24,6 @@ function init(){
 
   phase2Div = document.getElementById("phase2")
   updateCurrentEvent()
-  phaseOneSetup()
 }
 
 /* Event Class */
@@ -53,9 +52,18 @@ function updateCurrentEvent(){
 }
 
 // Follows a simplpe Stack procedure
-function pushEvent(){
-  bufferEvent.push(EventList[ parseInt(Math.random()*EventList.length,10) ])
-
+function pushEvent( optionalID ){
+  if(typeof optionalID == 'undefined'){
+    tempRand = parseInt(Math.random()*EventList.length,10)
+    bufferEvent.push(EventList[ tempRand ])
+    EventList.splice(tempRand,1)
+  }
+  else
+    for (item of EventList)
+      if(item.id == "optionalID"){
+        bufferEvent.push(item)
+        break
+      }
 }
 function popEvent(){
   currentEvent = bufferEvent.pop()
