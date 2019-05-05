@@ -89,7 +89,7 @@ EventList = [
     new event( /*Event 6*/
       "carBreakdown",
         //Promp
-        "Your car's turning light breaks down, you take it to the mechanic and it costs $210",
+        "Your car's turning light breaks, you take it to the mechanic and it costs $210",
         //Choices
         [
             "Pay for the repair $210",
@@ -128,7 +128,7 @@ EventList = [
         [
             "Pay $220",
             "Don't pay",
-            "Ask your parent to help out"
+            "Ask your parent to pay a portion"
         ],
         //Actions
         [
@@ -225,7 +225,7 @@ EventList = [
     new event( /*Event 14*/
       "healthInsurance",
         //Promp
-        "You need to select a health plan for you",
+        "You need to select a health insurance plan for yourself",
         //Choices
         [
             "Golden plan $290",
@@ -254,6 +254,23 @@ EventList = [
             () => { setHappiness(-25); /**/},
             () => { setWorkstrike(+1); setHappiness(+25) /**/},
             () => { setMoney(-300) /**/},
+        ],
+    ),
+    new event( /*Event 16*/
+      "childVacc",
+        //Promp
+        "Your son/daughter requires vaccinations for school",
+        //Choices
+        [
+            "Take time off and bring to doctor for vaccinations",
+            "Keep your child out of school until a later time",
+            "Ask a friend to take child for vaccinations"
+        ],
+        //Actions
+        [
+            () => { setWorkstrike(+1); setMoney(-100); /**/},
+            () => {  setHappiness(-25) /**/},
+            () => { setMoney(-100) /**/},
         ],
     ),
 ]
