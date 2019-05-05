@@ -20,7 +20,7 @@ function person(name,family,pet,potjb,pt,mt,mon){
 }
 
 function getName(){
-    return person.name();
+    return person.name;
 }
 function getPotentialJob(i){
     return person.potentialJobs[i];
@@ -29,11 +29,11 @@ function getFamily(i){
     return person.getfamily[i];
 }
 function getPhysicalTolerance(){
-    return person.physicalTolerance();
+    return person.physicalTolerance;
 }
 function getMentalTolerance(){
-    return person.mentalTolerance();
+    return person.mentalTolerance;
 }
 function getMoney(){
-    return person.money();
+    return person.money;
 }
