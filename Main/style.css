@@ -56,11 +56,9 @@ body {
   float: left;
 }
 #phase1{
-  height: 60%;
 }
 
 #phase2{
-  height: 40%;
 }
 
 .optionsButton{
@@ -94,11 +92,35 @@ body {
   background-color:#bec0c5;
   height: 40%;
   float: left;
-  width: 100%
+  width: 100%;
+  margin:auto;
 }
+#innerDecisionTree{
+  width: 40%;
+  background-color:red;
+  text-align: left;
+  font-size: 18px;
+}
+.subInnerDecisionTree{
+  width: 60%;
+  float: left;
+}
+.subInnerDecisionTree:last-child{
+  width: 40%;
+  float: right;
+}
+.list-unstyled li{
+  padding-top:6px ;
+}
+
+
+
+
+
 
 .row{
   margin: 1%;
+  width: 100%;
 }
 
 

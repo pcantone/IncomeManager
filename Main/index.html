@@ -19,12 +19,12 @@
     <div id = "phase1" class="container">
 
       <div id = "outerQuestion" >
-        <div class="row" style="float:left">
+        <div class="row">
           <div id = "question" class="text-center col-md-12"><h3>Question</h3></div>
         </div><!--  close row  -->
       </div>
 
-      
+
       <div class="row">
         <div class="text-center col-md-4">
           <button class="optionsButton" onclick="clickChoice(0)">
@@ -49,8 +49,9 @@
 
         <div id="outerConsequence" >
           <div class="row">
-            <div id = "consequence" class="text-center col-md-12">Consequence</div>
-            <button onclick="nextEvent()">Next</button>
+            <div id = "consequence" class="text-center col-md-12">Consequence
+              <button >Ok</button>
+              </div>
           </div><!--  close row  -->
         </div>
     </div><!-- close phase1 -->
@@ -62,10 +63,36 @@
 
         <div id = "outerDecisionTree">
           <div class="row">
-            <div id = "decisionTree" class="text-center col-md-12">Decision Tree
-                <button onclick="nextEvent()">Next</button>
-            </div>
+            <div id = "decisionTree" class="text-center col-md-12"><h3><u>To Do List</u></h3></div>
           </div><!--  close row  -->
+<div id="innerDecisionTree">
+              <div class="subInnerDecisionTree">
+                <ul class="list-unstyled">
+                  <li>Family Time                   </li>
+                  <li>Pay Insurance                 </li>
+                  <li>Pay Taxes                     </li>
+                  <li>Buy food (Cheap)              </li>
+                  <li>Buy food (Healthy)            </li>
+                  <li>Pay Taxes                     </li>
+                </ul>
+              </div> <!--close subInnerDecisionTree -->
+
+               <div class="subInnerDecisionTree">
+                <div class="checkbox"><label><input id="box1" type="checkbox"></label></div>
+                <div class="checkbox"><label><input id="box2" type="checkbox"></label></div>
+                <div class="checkbox"><label><input id="box3" type="checkbox"></label></div>
+                <div class="checkbox"><label><input id="box4" type="checkbox"></label></div>
+                <div class="checkbox"><label><input id="box5" type="checkbox"></label></div>
+                <div class="checkbox"><label><input id="box6" type="checkbox"></label></div>
+                </ul>
+              </div> <!--close subInnerDecisionTree-->
+</div> <!--close innerDecisionTree -->
+
+
+
+              <div class="row">
+                <button onclick="nextEvent()">Next</button>
+              </div>
         </div>
 
     </div><!-- close phase2 -->
