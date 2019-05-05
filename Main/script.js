@@ -11,12 +11,9 @@ var dayReference = null
 var payDayReference = null
 var foodReference = null
 function init(){
-  pushEvent();
-  popEvent();
   person = people["Johnny"];
   // currentEvent = EventList[0]
   //phaseTwo = new phaseTwo();
-
   phase1Div = document.getElementById("phase1")
   questionPrompt = document.getElementById("question")
   optionButtonList = document.getElementsByClassName("optionsButton")
@@ -26,6 +23,7 @@ function init(){
   foodReference = document.getElementById("displayFood")
 
   phase2Div = document.getElementById("phase2")
+  updateCurrentEvent()
   phaseOneSetup()
 }
 
@@ -48,7 +46,7 @@ function clickChoice( indexOfChoice ){
 }
 
 function updateCurrentEvent(){
-  if(EventList.length < 2)
+  if(bufferEvent.length < 2)
     pushEvent()
   popEvent()
   phaseOneSetup()
