@@ -51,6 +51,7 @@ function updateCurrentEvent(){
   if(EventList.length < 2)
     pushEvent()
   popEvent()
+  phaseOneSetup()
 }
 
 // Follows a simplpe Stack procedure
