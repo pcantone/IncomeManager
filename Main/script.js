@@ -10,8 +10,10 @@ var moneyReference = null
 var dayReference = null
 var payDayReference = null
 var foodReference = null
+
 function init(){
   person = people["Johnny"];
+  initSpecial()
   // currentEvent = EventList[0]
   //phaseTwo = new phaseTwo();
   phase1Div = document.getElementById("phase1")
@@ -23,7 +25,9 @@ function init(){
   foodReference = document.getElementById("displayFood")
 
   phase2Div = document.getElementById("phase2")
-  updateCurrentEvent()
+  pushEvent("jobs")
+  popEvent()
+  phaseOneSetup()
 }
 
 /* Event Class */
@@ -58,12 +62,19 @@ function pushEvent( optionalID ){
     bufferEvent.push(EventList[ tempRand ])
     EventList.splice(tempRand,1)
   }
-  else
+  else{
+    for (item of SpecialEventList){
+      if(item.id == optionalID){
+        bufferEvent.push(item)
+        return
+      }
+    }
     for (item of EventList)
       if(item.id == "optionalID"){
         bufferEvent.push(item)
-        break
+        return
       }
+    }
 }
 function popEvent(){
   currentEvent = bufferEvent.pop()
