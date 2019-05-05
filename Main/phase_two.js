@@ -1,8 +1,8 @@
 
 var person = null
 var job = null
-var dayCounter = null;
-var payDay = null;
+var dayCounter = 31;
+var payDay = 14;
 
 chanceOfPhysicalIll = null
 chanceOfMentalIll = null
@@ -66,7 +66,7 @@ function phaseTwoManager(){
     }
     else if(document.getElementById("box4")){
       //Buy cheap food
-      moneycheck = person.getMoney() - 120;
+      moneycheck = person.getMoney() - 5;
       if (moneyCheck <= 0){
         //game over
       }
@@ -76,7 +76,7 @@ function phaseTwoManager(){
     }
     else if(document.getElementById("box5")){
       //buy healthy food
-      moneycheck = person.getMoney() - 120;
+      moneycheck = person.getMoney() - 10;
       if (moneyCheck <= 0){
         //game over
       }
