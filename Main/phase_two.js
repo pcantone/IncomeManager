@@ -37,3 +37,21 @@ function nextEvent(){
   pushEvent()
   phaseOneSetup()
 }
+var decision = null;
+function decisionEvent(){
+    if (document.getElementById("box1").ischecked){
+      //family time: add happiness
+    }
+    else if(document.getElementById("box2")){
+      //pay insurance
+    }
+    else if(document.getElementById("box3")){
+      //Pay taxes
+    }
+    else if(document.getElementById("box4")){
+      //Buy cheap food
+    }
+    else if(document.getElementById("box5")){
+      //buy healthy food
+    }
+}
