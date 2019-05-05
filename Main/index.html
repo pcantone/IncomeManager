@@ -18,35 +18,41 @@
 <div id="center">
     <div id = "phase1" class="container">
 
-<div id = "outerQuestion" >
-      <div class="row">
-        <div id = "question" class="text-center col-md-12"><h3>Question</h3></div>
-      </div><!--  close row  -->
-</div>
+      <div id = "outerQuestion" >
+        <div class="row" style="float:left">
+          <div id = "question" class="text-center col-md-12"><h3>Question</h3></div>
+        </div><!--  close row  -->
+      </div>
+
+      
       <div class="row">
         <div class="text-center col-md-4">
-          <div class="optionsButton">
+          <button class="optionsButton" onclick="clickChoice(0)">
             Option 1
-          </div>
+          </button>
         </div>
 
         <div class="text-center col-md-4">
-          <div class="optionsButton">
+          <button class="optionsButton" onclick="clickChoice(1)">
             Option 2
-          </div>
+          </button>
         </div>
 
         <div class="text-center col-md-4">
-          <div class="optionsButton">
+          <button class="optionsButton" onclick="clickChoice(2)">
             Option 3
-          </div>
+          </button>
         </div>
       </div><!--  close row  -->
-<div id="outerConsequence" >
-      <div class="row">
-        <div id = "consequence" class="text-center col-md-12">Consequence</div>
-      </div><!--  close row  -->
-</div>
+
+
+
+        <div id="outerConsequence" >
+          <div class="row">
+            <div id = "consequence" class="text-center col-md-12">Consequence</div>
+            <button onclick="nextEvent()">Next</button>
+          </div><!--  close row  -->
+        </div>
     </div><!-- close phase1 -->
 
 
@@ -54,24 +60,24 @@
 
     <div id = "phase2" class="text-center container">
 
-<div id = "outerDecisionTree">
-      <div class="row">
-        <div id = "decisionTree" class="text-center col-md-12">Decision Tree
-            <button onclick="nextEvent()">Next</button>
+        <div id = "outerDecisionTree">
+          <div class="row">
+            <div id = "decisionTree" class="text-center col-md-12">Decision Tree
+                <button onclick="nextEvent()">Next</button>
+            </div>
+          </div><!--  close row  -->
         </div>
-      </div><!--  close row  -->
-</div>
 
     </div><!-- close phase2 -->
-</div>
+</div><!-- Close center -->
 
 
     <!-- This could be Footer, or another jawn -->
     <div id="footer">
-      <div class="subfooter">Money</div>
-      <div class="subfooter">Day</div>
-      <div class="subfooter">Next Pay</div>
-      <div class="subfooter">Food</div>
+      <div class="subfooter" id="displayMoney">Money</div>
+      <div class="subfooter" id="displayDay">Day</div>
+      <div class="subfooter" id="displayNextPayDay">Next Pay</div>
+      <div class="subfooter" id="displayFood">Food</div>
     </div>
 </body>
 </html>

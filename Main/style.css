@@ -17,7 +17,7 @@ body {
 }
 #center{
   height: 180%;
-  /* overflow: scroll; */
+  overflow: scroll;
 }
 ::-webkit-scrollbar {
   background: transparent;
@@ -49,8 +49,12 @@ body {
   font-size: 30px;
   background-color: #CCC;
   float: left;
+  height: 50%;
 }
-
+#question{
+  width: 100%;
+  float: left;
+}
 #phase1{
   height: 60%;
 }
@@ -87,15 +91,18 @@ body {
 }
 
 #outerDecisionTree{
-  background-color: #aeb0b5;
-  height:50%;
+  background-color:#bec0c5;
+  height: 40%;
   float: left;
   width: 100%
 }
 
 .row{
-  margin: 1%
+  margin: 1%;
 }
+
+
+
 
 #characterSelect{
   width: 100%;
