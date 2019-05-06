@@ -10,6 +10,7 @@ var moneyReference = null
 var dayReference = null
 var payDayReference = null
 var foodReference = null
+var consReference = null
 
 function init(){
   person = people["Johnny"];
@@ -23,6 +24,7 @@ function init(){
   dayReference = document.getElementById("displayDay")
   payDayReference = document.getElementById("displayNextPayDay")
   foodReference = document.getElementById("displayFood")
+  consReference = document.getElementById("consequence")
 
   phase2Div = document.getElementById("phase2")
   pushEvent("jobs")
@@ -90,7 +92,9 @@ function phaseOneSetup(){
   questionPrompt.innerHTML = currentEvent.prompt
   for( let i = 0; i < 3 ; i++)
     optionButtonList[i].innerHTML = currentEvent.choices[i]
+  consReference.innerHTML = currentEvent.consequence
 }
+
 
 
 function beginGame(){
