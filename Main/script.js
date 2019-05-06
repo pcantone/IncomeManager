@@ -33,10 +33,11 @@ function init(){
 }
 
 /* Event Class */
-function event(id, prompt, choices, conseq){
+function event(id, prompt, choices, con, conseq){
   this.id = id;
   this.prompt = prompt;
   this.choices = choices;
+  this.conAction = con
   this.consequence = conseq;
 }
 
@@ -45,8 +46,8 @@ function clickChoice( indexOfChoice ){
     tempJob = potentialJobs[person.potentialJob[indexOfChoice]];
     phaseTwo(tempJob);
   }
-  currentEvent.consequence[indexOfChoice]()
-
+  currentEvent.conAction[indexOfChoice]()
+  consReference.innerHTML = currentEvent.consequence[indexOfChoice]
   // startPhaseTwo()
 }
 
@@ -92,7 +93,6 @@ function phaseOneSetup(){
   questionPrompt.innerHTML = currentEvent.prompt
   for( let i = 0; i < 3 ; i++)
     optionButtonList[i].innerHTML = currentEvent.choices[i]
-  consReference.innerHTML = currentEvent.consequence
 }
 
 
