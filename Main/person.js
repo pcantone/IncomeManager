@@ -39,6 +39,9 @@ function getMentalTolerance(){
 function getMoney(){
     return person.money;
 }
+function setMoney(change){
+  person.money += change
+}
 function getFood(){
     return person.food;
 }
@@ -51,4 +54,3 @@ function setHealth(num){
 function getPTolerance(){
     return person.physicalTolerance;
 }
-
