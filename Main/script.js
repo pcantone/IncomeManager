@@ -31,11 +31,11 @@ function init(){
 }
 
 /* Event Class */
-function event(id, prompt, choices, con){
+function event(id, prompt, choices, conseq){
   this.id = id;
   this.prompt = prompt;
   this.choices = choices;
-  this.consequence = con;
+  this.consequence = conseq;
 }
 
 function clickChoice( indexOfChoice ){

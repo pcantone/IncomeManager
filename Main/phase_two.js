@@ -1,7 +1,7 @@
 
 var person = null
 var job = null
-var dayCounter = 31;
+var dayCounter = 0;
 var payDay = 14;
 
 chanceOfPhysicalIll = null
@@ -33,6 +33,8 @@ function checkIfIll(){
 }
 
 function nextEvent(){
+  dayCounter++
+  payDay--
   // timeTillNextHeater--
   // if( timeTillNextHeater < 1)
   //   pushEvent()
