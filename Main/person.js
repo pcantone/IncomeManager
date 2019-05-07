@@ -45,6 +45,9 @@ function setMoney(change){
 function getFood(){
     return person.food;
 }
+function setFood(change){
+  person.food += change
+}
 function getHealth(){
     return person.health;
 }
@@ -54,3 +57,5 @@ function setHealth(num){
 function getPTolerance(){
     return person.physicalTolerance;
 }
+
+function setHappiness(change){}

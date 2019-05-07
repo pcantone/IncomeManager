@@ -64,7 +64,7 @@ EventList = [
         ],
         //Actions
         [
-            () => { setMoney()  },
+            () => { setMoney(-100)  },
             () => { /*NEED_IMPLEMENT: You still live there for 10 days until Eviction, you are forced out*/},
             () => { setHappiness(-50) },
         ],

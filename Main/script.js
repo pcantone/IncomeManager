@@ -33,7 +33,7 @@ function init(){
 }
 
 /* Event Class */
-function event(id, prompt, choices, con, conseq){
+function event(id, prompt, choices, con, conseq = ["","",""]){
   this.id = id;
   this.prompt = prompt;
   this.choices = choices;
@@ -42,12 +42,13 @@ function event(id, prompt, choices, con, conseq){
 }
 
 function clickChoice( indexOfChoice ){
-  if(job == null){
-    tempJob = potentialJobs[person.potentialJob[indexOfChoice]];
-    phaseTwo(tempJob);
-  }
+  // if(job == null){
+  //   tempJob = potentialJobs[person.potentialJob[indexOfChoice]];
+  //   phaseTwo(tempJob);
+  // }
   currentEvent.conAction[indexOfChoice]()
   consReference.innerHTML = currentEvent.consequence[indexOfChoice]
+  phaseOneSetup()
   // startPhaseTwo()
 }
 
@@ -100,3 +101,11 @@ function phaseOneSetup(){
 function beginGame(){
   window.location.href = "index.html";
 }
+
+
+function hide(id){
+  document.getElementById(id).style.display = "none"
+}
+// function show(id){
+//   document.getElementById(id).style.display = "block"
+// }
