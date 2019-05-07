@@ -39,28 +39,40 @@
       <div class="row">
 
         <div id = "optionOne" class="text-center col-md-4">
-          <button class="optionsButton" onclick="clickChoice(0); hide('optionOne'); show('optionOneFalse')">
+          <button class="optionsButton" onclick="clickChoice(0); hideChoices(); showChoices()">
             Option 1
           </button>
         </div>
 
         <div id = "optionOneFalse" class="text-center col-md-4">
-          <div class="optionsButton">
+          <div class="optionsButtonFalse">
             Option 1
           </div>
         </div>
 
 
-        <div class="text-center col-md-4">
-          <button class="optionsButton" onclick="clickChoice(1)">
+        <div id = "optionTwo" class="text-center col-md-4">
+          <button class="optionsButton" onclick="clickChoice(1); hideChoices(); showChoices()">
             Option 2
           </button>
         </div>
 
-        <div class="text-center col-md-4">
-          <button type="submit" id="choiceThree" class="optionsButton" onclick="clickChoice(2)">
+        <div id = "optionTwoFalse" class="text-center col-md-4">
+          <div class="optionsButtonFalse">
+            Option 2
+          </div>
+        </div>
+
+        <div id = "optionThree" class="text-center col-md-4">
+          <button class="optionsButton" onclick="clickChoice(2); hideChoices(); showChoices()">
             Option 3
           </button>
+        </div>
+
+        <div id = "optionThreeFalse" class="text-center col-md-4">
+          <div class="optionsButtonFalse">
+            Option 3
+          </div>
         </div>
       </div><!--  close row  -->
 

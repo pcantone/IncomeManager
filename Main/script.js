@@ -102,10 +102,23 @@ function beginGame(){
   window.location.href = "index.html";
 }
 
+function hideChoices(){
+  options = ['optionOne','optionTwo','optionThree'];
+  for (x of options){
+    hide(x);
+  }
+}
+
+function showChoices(){
+  options = ['optionOneFalse','optionTwoFalse','optionThreeFalse'];
+  for (x of options){
+    show(x);
+  }
+}
 
 function hide(id){
-  document.getElementById(id).style.display = "none"
+  document.getElementById(id).style.display = "none";
 }
-// function show(id){
-//   document.getElementById(id).style.display = "block"
-// }
+function show(id){
+  document.getElementById(id).style.display = "block";
+}

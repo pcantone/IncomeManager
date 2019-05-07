@@ -10,10 +10,10 @@ body {
   flex-direction: column;
   background-color: #212121
 }
-#optionOne{
+#optionOne,#optionTwo,#optionThree{
   display: block;
 }
-#optionOneFalse{
+#optionOneFalse,#optionTwoFalse,#optionThreeFalse{
   display:none;
 }
 
@@ -79,7 +79,7 @@ body {
 #phase2{
 }
 
-.optionsButton{
+.optionsButton,.optionsButtonFalse{
   background-color:#205493;
   height: 100px;
   width: 90%;
