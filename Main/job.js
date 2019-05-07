@@ -1,4 +1,4 @@
-var potentialJobs = {'Carlift': new job("Carlift",10,8,5,2, "This is a not physically demanding Job, but it requires lots of driving"), 
+var potentialJobs = {'Carlift': new job("Carlift",10,8,5,2, "This is a not physically demanding Job, but it requires lots of driving"),
         'Server':new job("Server",8,8,5,1, "This is a low physically demanding job that only requires serving food to tables")
         , 'Warehouse Worker':new job("Warehouse Worker",10,8,5,1,"This is a physicaly demanding job that requires lots of strength and mental toughness")
         , 'Janitor':new job("Janitor",10,10,5,2,"This a physically demanding job that requires not so much mental toughness")
@@ -41,6 +41,9 @@ function getJobLevel(i){
 }
 function getJobStrikes(){
     return job.jobstrikes;
+}
+function setWorkstrike(change){
+    job.jobstrikes += change
 }
 function getStrike(){
     job.jobstrikes = job.jobstrikes - 1;

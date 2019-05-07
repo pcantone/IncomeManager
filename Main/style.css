@@ -10,6 +10,13 @@ body {
   flex-direction: column;
   background-color: #212121
 }
+#optionOne{
+  display: block;
+}
+#optionOneFalse{
+  display:none;
+}
+
 #header{
   font-size: 30px;
   background-color: #112e51;

@@ -35,6 +35,10 @@ function checkIfIll(){
 function nextEvent(){
   dayCounter++
   payDay--
+  if(payDay <= 0){
+    payDay = 14
+    setMoney( job.pay * job.hours * 10)
+  }
   // timeTillNextHeater--
   // if( timeTillNextHeater < 1)
   //   pushEvent()
@@ -47,44 +51,24 @@ function phaseTwoManager(){
     }
     if(document.getElementById("box2").checked){
       //pay insurance
-      moneycheck = person.getMoney() - 120;
-      if (moneyCheck <= 0){
-        //game over
-      }
-      else{
-        nextEvent();
-      }
+      moneyCheck = person.getMoney() - 120;
     }
     if(document.getElementById("box3").checked){
       //Pay taxes
       moneycheck = person.getMoney() - 120;
-      if (moneyCheck <= 0){
-        //game over
-      }
-      else{
-        nextEvent();
-      }
     }
     if(document.getElementById("box4").checked){
       //Buy cheap food
       moneycheck = person.getMoney() - 5;
-      if (moneyCheck <= 0){
-        //game over
-      }
-      else{
-        person.setHealth(-5);
-        nextEvent();
-      }
+      person.setHealth(-5);
     }
     if(document.getElementById("box5").checked){
       //buy healthy food
       moneycheck = person.getMoney() - 10;
-      if (moneyCheck <= 0){
-        //game over
-      }
-      else{
-        person.setHealth(5);
-        nextEvent();
-      }
+      person.setHealth(5);
     }
+    if (getMoney() <= 0)
+      ;
+    nextEvent();
+
 }

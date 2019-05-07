@@ -13,10 +13,16 @@ function initSpecial(){
       ],
       //Actions
        [
-        () => { tempJob = potentialJobs[person.potentialJob[0]]; phaseTwo(job) },
-        () => { tempJob = potentialJobs[person.potentialJob[1]]; phaseTwo(job) },
-        () => { tempJob = potentialJobs[person.potentialJob[2]]; phaseTwo(job) },
+        () => { tempJob = potentialJobs[person.potentialJob[0]]; phaseTwo(tempJob) },
+        () => { tempJob = potentialJobs[person.potentialJob[1]]; phaseTwo(tempJob) },
+        () => { tempJob = potentialJobs[person.potentialJob[2]]; phaseTwo(tempJob) },
       ],
+      //Consquence
+      [
+        "Temp",
+        "Temp",
+        "Temp",
+      ]
     ),
   )
 }
