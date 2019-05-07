@@ -11,25 +11,7 @@
   <script src="http://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
   <script src="Event.js"></script>
   <link rel="icon" href="icon.png" type="image/png" sizes="16x16">
-  <script>
-      $(document).ready(function () {
-
-          $("#formABC").submit(function (e) {
-
-              //stop submitting the form to see the disabled button effect
-              e.preventDefault();
-
-              //disable the submit button
-              $("#btnSubmit").attr("disabled", true);
-
-              //disable a normal button
-              $("#btnTest").attr("disabled", true);
-
-              return true;
-
-          });
-      });
-  </script>
+  <script src="jquery.js"></script>
 
   <title>Income Manager</title>
   <link rel="stylesheet" href="style.css">
@@ -55,11 +37,19 @@
 
 
       <div class="row">
-        <div class="text-center col-md-4">
-          <button class="optionsButton" onclick="clickChoice(0)">
+
+        <div id = "optionOne" class="text-center col-md-4">
+          <button class="optionsButton" onclick="clickChoice(0); hide('optionOne'); show('optionOneFalse')">
             Option 1
           </button>
         </div>
+
+        <div id = "optionOneFalse" class="text-center col-md-4">
+          <div class="optionsButton">
+            Option 1
+          </div>
+        </div>
+
 
         <div class="text-center col-md-4">
           <button class="optionsButton" onclick="clickChoice(1)">
@@ -68,7 +58,7 @@
         </div>
 
         <div class="text-center col-md-4">
-          <button class="optionsButton" onclick="clickChoice(2)">
+          <button type="submit" id="choiceThree" class="optionsButton" onclick="clickChoice(2)">
             Option 3
           </button>
         </div>
