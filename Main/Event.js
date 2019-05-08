@@ -4,12 +4,12 @@ EventList = [
   new event( /*Event 1*/
     "yardSale",
     //Promp
-    "Yard sale day is coming up, you have the opportunity to get rid of some old items:",
+    "Yard sale day is coming up, you have the opportunity to get rid of some old items",
     //Choices
     [
       "Spend a few hours selling old items",
       "Hold onto your goods",
-      "Buy a gift for yourselves"
+      "Buy a gift for yourself"
     ],
     //Actions
      [
@@ -17,14 +17,20 @@ EventList = [
       () => { setHappiness(+10) },
       () => { setMoney(-20); setHappiness(+20) },
     ],
+    //Consequences
+    [
+        "Preparing for the yard sale is tiring, but you do make $150.",
+        "You don't make any extra cash, but you do get to keep your stuff.",
+        "You buy yourself something you really wanted, but you spent $20."
+    ],
   ),
     new event( /*Event 2*/
       "carInsurance",
         //Promp
-        "Your car insurance is due soon, fail to pay insurance means you cant legally drive your car",
+        "Your car insurance is due soon, failing to pay the insurance means you cant legally drive your car",
         //Choices
         [
-            "Pay the insurance $140",
+            "Pay the $140 insurance",
             "Don't pay the insurance",
             "Don't drive anymore and just take the bus to work"
         ],
@@ -34,16 +40,22 @@ EventList = [
             () => {/*NEED IMPLEMENT: Queue pay car insurance later*/},
             () => {/*NEED IMPLEMENT: Bus fee $10 everyday*/  },
         ],
+        //Consequences
+        [
+            "You keep your insurance and pay $140, you also get to continue to drive your car.",
+            "You take the risk of driving without insurance, but you will eventually have to pay the bill.",
+            "You have to ride the bus everyday which costs $10 daily, but you don't have to pay the insurance."
+        ],
     ),
     new event( /*Event 3*/
       "friendBorrow",
         //Promp
-        "You best friend ask to borrow $50 from you",
+        "You best friend asks to borrow $50 from you to help him pay his rent.",
         //Choices
         [
             "Give him $50",
             "Don't give him the money",
-            "Offer him to stay in your room"
+            "Offer him to stay at your place"
         ],
         //Actions
         [
@@ -51,22 +63,38 @@ EventList = [
             () => { setHappiness(-10) },
             () => { setHappiness(-10) },
         ],
+        //Consequences
+        [
+            "You give your friend the money and it makes you feel good that you can help out.",
+            "You let him know you can't lend him any money, and you feel embarassed you couldn't help out.",
+            "You offer to let him stay at your place, but you aren't too happy you'll have to host him."
+        ],
     ),
     new event( /*Event 4*/
       "carInsurance",
         //Promp
-        "Your landowner demand the rent of $???(depended on the apartment you choice previously)",
+        "Your landlord demands rent of $"+person.apartmentPrice,
         //Choices
         [
-            "Pay $???",
-            "Don't pay but stay in side",
-            "Move to another cheaper places"
+            "Pay $"+person.apartmentPrice,
+            "Don't pay and get evicted",
+            "Move to a cheaper apartment"
         ],
         //Actions
         [
+<<<<<<< HEAD
+            () => { setMoney(person.apartmentPrice)  },
+=======
             () => { setMoney(-100)  },
+>>>>>>> 5e44dd0b1731d554e533a6c7401098b8415fd120
             () => { /*NEED_IMPLEMENT: You still live there for 10 days until Eviction, you are forced out*/},
             () => { setHappiness(-50) },
+        ],
+        //Consequences
+        [
+            "You pay your rent and ",
+            "You fail to pay rent and you will get evicted in 10 days and be forced to find another place to live.",
+            "You move out and are forced to find another place to live, you also must pay for moving costs."
         ],
     ),
     new event( /*Event 5*/
@@ -85,6 +113,12 @@ EventList = [
             () => { setMoney(-500) /*NEED_IMPLEMENT: Transportation cost everyweek: $15*/},
             () => { setMoney(-600), setHappiness(+20) /*NEED_IMPLEMENT: Transportation cost everyweek: $5*/},
         ],
+        //Consequences
+        [
+            "You choose a cheap apartment, but it is far from the city and your job.",
+            "You choose a mid-priced apartment that is just outside the city and your job.",
+            "You choose an high-end apartment in the heart of the city just around the corner from your job."
+        ],
     ),
     new event( /*Event 6*/
       "carBreakdown",
@@ -101,6 +135,12 @@ EventList = [
             () => { setMoney(-210)},
             () => { /*NEED_IMPLEMENT: Could stop by police and get a fine of $400*/ },
             () => { setMoney(-120), setWorkstrike(+1)},
+        ],
+        //Consequences
+        [
+            "You pay the $210 repair cost and continue to use your car normally.",
+            "You don't pay for the repairs, but you could get stopped by the police and fined.",
+            "You take a day off work to repair it yourself, you boss gives you a work strike and it costs $120 for car parts."
         ],
     ),
     new event( /*Event 7*/
@@ -254,6 +294,12 @@ EventList = [
             () => { setHappiness(-25); /**/},
             () => { setWorkstrike(+1); setHappiness(+25) /**/},
             () => { setMoney(-300) /**/},
+        ],
+        //Consequences
+        [
+            "Going to work helps you out financially, but you did miss out on being with your mother.",
+            "Your boss gives you a work strike, but you did get to be there for your mother.",
+            "You get to stay at work and help out your mother, but you do have to pay for a $300 doctors visit."
         ],
     ),
     new event( /*Event 16*/
