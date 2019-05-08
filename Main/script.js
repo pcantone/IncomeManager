@@ -21,7 +21,6 @@ function init(){
   phase1Div = document.getElementById("phase1")
   questionPrompt = document.getElementById("question")
   optionButtonList = document.getElementsByClassName("optionsButton")
-  optionButtonFalseList = document.getElementsByClassName("optionsButtonFalse")
   moneyReference = document.getElementById("displayMoney")
   dayReference = document.getElementById("displayDay")
   payDayReference = document.getElementById("displayNextPayDay")
@@ -94,10 +93,8 @@ function phaseOneSetup(){
   foodReference.innerHTML = "Food: " + getFood()
 
   questionPrompt.innerHTML = currentEvent.prompt
-  for( let i = 0; i < 3 ; i++){
+  for( let i = 0; i < 3 ; i++)
     optionButtonList[i].innerHTML = currentEvent.choices[i]
-    optionButtonFalseList[i].innerHTML = currentEvent.choices[i]
-  }
 }
 
 
@@ -106,19 +103,10 @@ function beginGame(){
   window.location.href = "index.html";
 }
 
-options = ['optionOne','optionTwo','optionThree'];
-optionsFalse = ['optionOneFalse','optionTwoFalse','optionThreeFalse'];
 
-function hideChoices(whichOptions){
-  for (x of whichOptions){
-    hide(x);
-  }
-}
-
-function showChoices(whichOptions){
-  for (x of whichOptions){
-    show(x);
-  }
+function fadeTo(from, to){
+  hide(from);
+  show(to);
 }
 
 function hide(id){

@@ -29,6 +29,7 @@
           <!--========================= Start Phase1 =========================-->
           <div id = "phase1" class="container">
             <!--========================= Start Outer Question =========================-->
+            <div id = "fadeOne">
             <div id="outerQuestion" >
               <div class="row">
                 <h3><div id = "question" class="text-center col-md-12">You shouldn't be able to see this</div></h3>
@@ -41,7 +42,7 @@
 
             <div class="row">
               <div id = "optionOne" class="text-center col-md-4">
-                <button class="optionsButton" onclick="clickChoice(0); hideChoices(options); showChoices(optionsFalse)">
+                <button class="optionsButton" onclick="clickChoice(0); fadeTo('fadeOne','fadeTwo')">
                   Option 1
                 </button>
               </div>
@@ -54,7 +55,7 @@
 
 
               <div id = "optionTwo" class="text-center col-md-4">
-                <button class="optionsButton" onclick="clickChoice(1); hideChoices(options); showChoices(optionsFalse)">
+                <button class="optionsButton" onclick="clickChoice(1); fadeTo('fadeOne','fadeTwo')">
                   Option 2
                 </button>
               </div>
@@ -66,7 +67,7 @@
               </div>
 
               <div id = "optionThree" class="text-center col-md-4">
-                <button class="optionsButton" onclick="clickChoice(2); hideChoices(options); showChoices(optionsFalse)">
+                <button class="optionsButton" onclick="clickChoice(2); fadeTo('fadeOne','fadeTwo')">
                   Option 3
                 </button>
               </div>
@@ -77,21 +78,21 @@
                 </button>
               </div>
             </div><!--  close row  -->
-            <!--========================= -END- Outer Question =========================-->
+          </div><!-- close fadeOne-->
+            <!--========================= -END- Options =========================-->
 
 
             <!--========================= Start Consequence =========================-->
-
+            <div id="fadeTwo">
             <div id="outerConsequence" >
               <div class="row">
                 <div id = "consequence" class="text-center col-md-12"><h3>Consequence</h3>
     This is filler text that will eventually be a fact if relavent to the choice made by the player, but yea like I said this is filler text that will hopefully be overwritten.
                 </div>
-                <form id="formABC">
-                  <center><input type="submit" id="btnSubmit" value = 'Continue'></input></center>
-                </form>
+                  <center><button onclick="fadeTo('fadeTwo','fadeThree')">Continue</button></center>
               </div><!--  close row  -->
             </div>
+            </div><!-- close fadeTwo-->
             <!--========================= -END- Consequence =========================-->
           </div><!-- close phase1 -->
           <!--========================= -END- Phase1 =========================-->
@@ -99,6 +100,7 @@
 
 
           <!--========================= Start Phase2 =========================-->
+          <div id="fadeThree">
           <div id = "phase2" class="text-center container">
             <!--========================= Start outerDecisionTree =========================-->
             <div id = "outerDecisionTree">
@@ -127,11 +129,12 @@
 
 
               <div class="row">
-                <button onclick="phaseTwoManager()">Next</button>
+                <button onclick="phaseTwoManager(); fadeTo('fadeThree','fadeOne')">Next</button>
               </div>
             </div>
         <!--========================= -END- outerDecisionTree =========================-->
       </div><!-- close phase2 -->
+      </div><!-- close fadeThree-->
       <!--========================= -END outerDecisionTree =========================-->
 
 

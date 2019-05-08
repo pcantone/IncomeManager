@@ -180,3 +180,15 @@ body {
   line-height: 45px;
   height: 50px;
 }
+
+
+
+#fadeOne{
+  display: block;
+}
+#fadeTwo{
+  display: none;
+}
+#fadeThree{
+  display: none;
+}
