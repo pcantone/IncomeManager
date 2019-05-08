@@ -82,14 +82,10 @@ EventList = [
         ],
         //Actions
         [
-<<<<<<< HEAD
             () => { setMoney(person.apartmentPrice)  },
-=======
             () => { setMoney(-100)  },
->>>>>>> 5e44dd0b1731d554e533a6c7401098b8415fd120
-            () => { /*NEED_IMPLEMENT: You still live there for 10 days until Eviction, you are forced out*/},
-            () => { setHappiness(-50) },
-        ],
+            () => { /* Nothing yet */ },
+        ]
         //Consequences
         [
             "You pay your rent and ",
