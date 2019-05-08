@@ -80,12 +80,12 @@ body {
 }
 
 .optionsButton,.optionsButtonFalse{
+  line-height: 20px;
   background-color:#205493;
   height: 100px;
   width: 90%;
   margin:0 5% 15% 5%;
   text-align: center;
-  line-height: 22px;
   overflow: hidden;
   font-size: 18px;
   float: left;
@@ -93,18 +93,25 @@ body {
   padding: 2% 5% 2% 5%;
   text-decoration: none;
   border-radius: 10px;
+  transition: transform .2s; /* Animation */
+}
 
+.optionsButtonFalse{
+  background-color:#6287B3;
 }
-.optionsButton:first-child{
+.optionsButtonFalse:hover {
+  cursor:default;
 }
-.optionsButton:last-child{
-}
+
 
 .optionsButton:hover { /* link hovering style*/
-  background-color: #0071bc
-
-;
+  background-color: #0071bc;
+  transform: scale(1.25);
   color: #000;
+}
+
+.optionsButtonFalse:onclick{
+  box-shadow: 0 0 #000;
 }
 
 
