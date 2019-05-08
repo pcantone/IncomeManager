@@ -73,25 +73,19 @@ EventList = [
     new event( /*Event 4*/
       "carInsurance",
         //Promp
-        "Your landlord demands rent of $"+person.apartmentPrice,
+        "Your landlord demands rent of $"+getAppartmentPrice(),
         //Choices
         [
-            "Pay $"+person.apartmentPrice,
+            "Pay $"+getAppartmentPrice() ,
             "Don't pay and get evicted",
             "Move to a cheaper apartment"
         ],
         //Actions
         [
-            () => { setMoney(person.apartmentPrice)  },
-<<<<<<< HEAD
+            () => { setMoney(person.apartmentPrice) },
             () => { /*NEED_IMPLEMENT: You still live there for 10 days until Eviction, you are forced out*/},
             () => { setHappiness(-50) },
         ],
-=======
-            () => { setMoney(-100)  },
-            () => { /* Nothing yet */ },
-        ]
->>>>>>> 5b56e28fd7d2d177238e2af0e05aecef2f2c69fc
         //Consequences
         [
             "You pay your rent and ",

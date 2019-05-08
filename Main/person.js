@@ -19,8 +19,11 @@ function Person(name,family,pet,potjb,pt,mt,mon){
     this.money = 1000;
     this.food = 6;
     this.health = 100;
+    this.apartmentPrice = 50;
 }
-
+function getAppartmentPrice(){
+  return people.apartmentPrice
+}
 function getName(){
     return person.name;
 }
