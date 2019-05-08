@@ -35,7 +35,7 @@ function checkIfIll(){
 function nextEvent(){
   dayCounter++
   payDay--
-  setFood(1)
+  setFood(-1)
   if(payDay <= 0){
     payDay = 14
     setMoney( job.pay * job.hours * 10)
