@@ -115,3 +115,9 @@ function hide(id){
 function show(id){
   document.getElementById(id).style.display = "block";
 }
+
+
+function myFunction() {
+  var element = document.getElementById("fadeTwo");
+  element.classList.add("w3-animate-fading");
+}

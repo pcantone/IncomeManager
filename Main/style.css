@@ -73,12 +73,6 @@ body {
   width: 100%;
   float: left;
 }
-#phase1{
-}
-
-#phase2{
-}
-
 .optionsButton,.optionsButtonFalse{
   line-height: 20px;
   background-color:#205493;
@@ -186,9 +180,9 @@ body {
 #fadeOne{
   display: block;
 }
-#fadeTwo{
+#fadeTwo, #fadeThree{
   display: none;
 }
-#fadeThree{
-  display: none;
+#fadeOne, #fadeTwo, #fadeThree{
+  transition: display .2s; /* Animation */
 }
