@@ -5,7 +5,6 @@ var bufferEvent = []
 /* Soon to be reference to the buttons */
 var phase1Div = null
 var optionButtonList = []
-var optionButtonFalseList = []
 var phase2Div = null
 var moneyReference = null
 var dayReference = null
