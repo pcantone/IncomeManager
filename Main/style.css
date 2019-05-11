@@ -2,8 +2,11 @@ html, body {
   height: 100%;
   width: 100%;
   margin: 0;
+  font-family: monospace;
 }
-
+h1, h2, h3, h4, h5 {
+  font-family: monospace;
+}
 
 body {
   display: flex;
@@ -120,18 +123,10 @@ body {
 
 }
 #innerDecisionTree{
-  width: 40%;
-  background-color:red;
-  text-align: left;
-  font-size: 18px;
 }
 .subInnerDecisionTree{
-  width: 60%;
-  float: left;
 }
 .subInnerDecisionTree:last-child{
-  width: 40%;
-  float: right;
 }
 .list-unstyled li{
   padding-top:6px ;
@@ -178,4 +173,8 @@ body {
 }
 
 #fadeOne, #fadeTwo, #fadeThree{
+}
+
+.checkrow{
+  width: 700px;
 }
